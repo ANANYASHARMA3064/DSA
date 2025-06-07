@@ -24,9 +24,11 @@ class Solution(object):
         :type nums: List[int]
         :type k: int
         :rtype: None Do not return anything, modify nums in-place instead.
+        Input: nums = [1,2,3,4,5,6,7], k = 3
+Output: [5,6,7,1,2,3,4]
         """
-        k=k%len(nums)
-        l,r=0,len(nums)-1
+        k=k%len(nums)#k=0
+        l,r=0,len(nums)-1#l=0,r=6
         while l<r:
             nums[l],nums[r]=nums[r],nums[l]
             l,r=l+1,r-1
