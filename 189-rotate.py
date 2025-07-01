@@ -27,17 +27,17 @@ class Solution(object):
         Input: nums = [1,2,3,4,5,6,7], k = 3
 Output: [5,6,7,1,2,3,4]
         """
-        k=k%len(nums)#k=0
+        k=k%len(nums)#because k can be bigger than the length of zeroes 
         l,r=0,len(nums)-1#l=0,r=6
-        while l<r:
+        while l<r:#rotated the given array completely 
             nums[l],nums[r]=nums[r],nums[l]
             l,r=l+1,r-1
         l,r=0,k-1
-        while l<r:
+        while l<r:#rotated the first array within the original array
             nums[l],nums[r]=nums[r],nums[l]
             l,r=l+1,r-1
         l,r=k,len(nums)-1
-        while l<r:
+        while l<r:#rotated the second array within the original array
             nums[l],nums[r]=nums[r],nums[l]
             l,r=l+1,r-1
         
