@@ -33,11 +33,11 @@ Output: [5,6,7,1,2,3,4]
             nums[l],nums[r]=nums[r],nums[l]
             l,r=l+1,r-1
         l,r=0,k-1
-        while l<r:#rotated the first array within the original array
+        while l<r:#rotated the first k elements
             nums[l],nums[r]=nums[r],nums[l]
             l,r=l+1,r-1
         l,r=k,len(nums)-1
-        while l<r:#rotated the second array within the original array
+        while l<r:#rotated the rest of the k elements
             nums[l],nums[r]=nums[r],nums[l]
             l,r=l+1,r-1
         
