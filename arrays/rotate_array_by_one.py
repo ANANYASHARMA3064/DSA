@@ -24,3 +24,11 @@ class Solution:
             j=arr[i]
             arr[i]=arr[rpointer]
             arr[rpointer]=j
+#brute forced
+class Solution:
+    def rotate(self, arr):
+        for i in range(len(arr) - 1, 0, -1):
+            arr[i] = arr[i - 1]
+        arr[0] = last
+
+        return arr
